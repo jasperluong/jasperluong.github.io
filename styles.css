@@ -1,0 +1,44 @@
+#title {
+  text-align: center;
+}
+main{
+  background: #eee;
+  border-radius: 10px;
+  padding: 15px;
+}
+.red {
+  color: #8C1515;
+}
+.stanford-font {
+  font-family: 'Source Sans 3', sans-serif; 
+  font-weight: 600;
+}
+.stanford-light {
+  font-family: 'Source Sans 3', sans-serif; 
+  font-weight: 200;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 5px auto;
+  padding-bottom: 20px;
+}
+#img-div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+#headline {
+  text-align: center;
+  margin: 35px 0;
+}
+a:visited {
+  color: #8C1515;
+}
+#tribute-info li {
+  margin-top: 15px;
+}
+#tribute-info > h3:not(#headline){
+  padding-top: 20px;
+}
