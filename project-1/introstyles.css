@@ -3,16 +3,25 @@ h1 {
 }
 #align-left {
     display: flex;
-    background-color: #1b1b32; 
+    background: linear-gradient(#1b1b32, #68686a); 
     border-radius: 10px;
+}
+#animated-button{
+    margin-left: 40%;
 }
 #intro-text {
     color: #f5f6f7;
     padding-left: 10px;
 }
-
+#Jasper-picture{
+    width: 25%;
+    height: 100%;
+}
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: #f5f6f7;
     margin: 0 5.67vw;
+}
+.big-text{
+    font-size: 5rem;
 }
