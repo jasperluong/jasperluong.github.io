@@ -21,10 +21,6 @@
 		background-repeat:no-repeat; /* sets a background image to repeat, repeat-x, repeat-y or not at all as written in this rule */
 		background-position:left bottom;/* sets a background image position */
 		color:#fff;	/* sets the the color of all header text to white */
-		-webkit-border-bottom-right-radius: 4px;
-		-webkit-border-bottom-left-radius: 4px;
-		-moz-border-radius-bottomright: 4px;
-		-moz-border-radius-bottomleft: 4px;
 		border-bottom-right-radius: 4px;
 		border-bottom-left-radius: 4px;	/* these 6 lines of border-radius code make rounded corners for the bottom work in firefox, safari, chrome, opera and IE9 */
 		margin:0 auto; /* by declaring a width on any block element (like a div), giving it a css property of margin:0 auto will center that block element on page */
@@ -47,8 +43,6 @@
 	ul.navigation li a{
 		background:#4a4a4a;	/* this is a dark grey background for the link */
 		color:#fff;	/* this makes the link text white */
-		-moz-border-radius:2px; 
-		-webkit-border-radius:2px; 
 		border-radius:2px;	/* these 3 lines of border-radius code make rounded corners work in firefox, safari, chrome, opera and IE9 */
 		border:1px solid #595959; /* this adds a light grey solid border of 1px width around the link */
 		padding:3px 10px;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
@@ -171,6 +165,14 @@
 
 		}
 	  }
+	  @media screen and (max-width: 768px) {
+		body{
+			font-size:0.75em; /* all normal text on the web page has a base font size of 14px now */
+		}
+		.list li a{
+			font-size:8.5px;	/* this makes all anchor classes with .list applied 11px tall  */
+		}
+	  }
 	  @media screen and (max-width: 479px) {
 		div.flex {
 			display: flex;
@@ -181,5 +183,11 @@
 		div.sidebar-left {
 			width: 73vw;
 			margin-top: 1rem;
+		}
+		body{
+			font-size:0.8em; /* all normal text on the web page has a base font size of 14px now */
+		}
+		.list li a{
+			font-size:8.5px;	/* this makes all anchor classes with .list applied 11px tall  */
 		}
 	  }
