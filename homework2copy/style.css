@@ -113,7 +113,7 @@
 			margin: 0;
 			width: 96vw;
 		}
-		p {
+		p { 
 			letter-spacing: .04em;
 			line-height: 1.6em;
 		}
@@ -168,9 +168,9 @@
 			width: 60vw; /* This does image resizing to 60 percent of viewport width */
 		}
 	  }
-
+		
 	  /* Testing device's hover capability  */
-	  @media (hover: hover) { /* These colors apply to devices with hover capability */
+	  @media (hover: hover) { /* These colors only apply to devices with hover capability */
 		
 		div.sidebar-left a{
 			color:#445e64;	/* this redefines all links in the left sidebar to this new color, as opposed to the default blue link color */
@@ -178,7 +178,8 @@
 
 		div.sidebar-left a:hover{
 			color: white;
-			background: black;		
+			background: black; /* Extra features added to hover */
+			text-decoration: none; 
 		}
 
 		ul.navigation li a:hover{
