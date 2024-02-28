@@ -121,6 +121,9 @@
 	
 
 	@media screen and (max-width: 960px) {
+		html {
+			overflow-x: hidden;
+		}
 		div#footer {
 			background-color: #c4d5d9;
 			margin: 0;
