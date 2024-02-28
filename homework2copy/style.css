@@ -65,7 +65,7 @@
 		}	
 
 	div.sidebar-left a{
-		text-decoration: none; /* Applies for devices without hover capability */
+		/* Applies for devices without hover capability */
 		color: green;
 	}
 	
@@ -84,11 +84,12 @@
 				
 	div#footer{
 		background-color:#c4d5d9;
-		margin:0 auto;
+		margin: 0px auto;
 		padding:15px;
 		text-align:center;
 		width:900px;
 	}
+
 	.float-left{
 		float:left;	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
 		margin:0  10px 10px 0;
