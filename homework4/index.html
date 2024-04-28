@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Progressive Web App (PWA)</h1>
+    <h3>Characteristics</h3>
+    <dl>
+        <dt>Usage of Service Workers</dt>
+        <dd>The use of a service worker allows PWAs to work offline or on low-quality networks. Service workers intercept network requests, cache, and update the cache. It checks for updates in the background and refreshes content so that the user sees the newest version. The service worker also helps the PWA send out push notifications when the web app is not open. Like traditional native apps, users can be re-engaged back to the app through promotions, updates, and important events. </dd>
+        <br>
+        <dt>App-like, discoverable, and installable</dt>
+        <dd>PWAs mimic the navigation and interface of native apps. They are responsive, working well with phones, tablets, and desktops. PWAs are accessible through URLs and they have a manifest file for web apps that search engines recognize as a web application. Moreover, the web app manifest allows users to add the PWA to their home screen without going through an app store. The manifest file specifies metadata for the installation like name, icon, start URL, and display properties, providing a native-like experience. </dd>
+    </dl>
+    <br>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <h1 id="greeting">Hi, glad to see you back!</h1>
+    <select id="backgroundSelector">
+        <option value="">Select a background</option>
+        <option value="light-blue">Light Blue</option>
+        <option value="light-gold">Light Gold</option>
+    </select>
+    <script src="script.js"></script>
+</body>
+</html>

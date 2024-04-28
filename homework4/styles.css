@@ -1,0 +1,39 @@
+/* Specific backgrounds */
+.light-blue {
+    background-image: url('lightblue.jpg');
+}
+
+.light-gold {
+    background-image: url('lightgold.jpg');
+}
+
+body {
+    transition: background-image 0.5s ease-in-out;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+dl {
+    margin-bottom: 20px;
+}
+
+#nameInput, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Media Query for devices with a max width of 768px */
+@media (max-width: 768px) {
+    h1, h3 {
+        font-size: 24px;
+    }
+
+    dt {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+}
