@@ -1,0 +1,40 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+img {
+    width: 100%;  /* Make image responsive */
+    height: auto; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+#robot {
+    margin: auto;
+}
+
+/* Media Query for tablets and desktops */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.2rem; /* Larger text on wider screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; 
+    }
+    h2 {
+        font-size: 2rem; 
+    }
+    h3 {
+        font-size: 1.5rem; 
+    }
+}

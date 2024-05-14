@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="comparing hybrid solutions between phonegap, flutter, and react native.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comparison of Hybrid Solutions: React Native, Flutter, and PhoneGap</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Comparison of React Native, Flutter, and PhoneGap</h1>
+        <h2>Introduction</h2>
+        <p>React Native, Flutter, and PhoneGap (or Apache Cordova) are described as "hybrid" solutions in mobile app development because they allow developers to build for multiple platforms, iOS and Android, using a single codebase. Native approaches would include Swift/Objective-C for iOS or Kotlin/Java for Android. Note that traditional hybrid apps aren't the exact same as cross-platform applications, as hybrid apps are web-based (using solely <a href="https://www.techtarget.com/searchsoftwarequality/definition/hybrid-application-hybrid-app">HTML, CSS, and JavaScript</a>).</p>
+        <div style="display: flex;">
+            <figure>
+                <img src="/table.jpeg" alt="comparison of native, hybrid, and cross-platform">
+                <figcaption><a href="https://dzone.com/articles/native-vs-hybrid-vs-cross-platform-how-and-what-to#top-bumper-container">A comparison of cross-platform,hybrid, and native</a></figcaption>
+            </figure>
+            <figure id="robot">
+                <img src="/background-chat.jpeg" alt="AI Robot that is AI generated using midjourney">
+                <figcaption>AI Robot that is AI generated using midjourney</figcaption>
+            </figure>
+        </div>
+        <h2>Performance</h2>
+        <p>Between Flutter, React Native, and PhoneGap, Flutter wins out. According to the official flutter.dev <a href="https://flutter.dev/">website</a>,"Flutter code compiles to ARM or Intel machine code as well as JavaScript, for fast performance on any device." On the other hand, PhoneGap (Apache Cordova) relies on WebView for rendering the UI which might be slower than Native performance. And React Native uses native components for UI rendering, providing near-native performance.</p> 
+        <h3>Performance Recommendation</h3>
+        <p>In terms of performance and maintaining performance critical applications, Flutter would give excellent performance.</p>
+        <h2>Languages and Frameworks</h2>
+        <p>React Native uses JavaScript (or TypeScript) under the React framework. Flutter uses the Dart programming languages under the Flutter framework developed by Google. PhoneGap uses HTML, CSS, and JavaScript and doesn't use any framework specifically, only web technologies. Both React Native and Flutter include hot reloading features (meaning you can edit the UI in realtime without restarting the app), with both having an extensive community (Flutter being backed by Google) with growing tools, libraries, and packages.</p>
+        <h3>Overall Recommendation</h3>
+        <p>In terms of the average web developer making the transition from web development to mobile development, having experience with JavaScript (or even React) would make React Native a natural choice. You can leverage your existing JavaScript/React skills to access a vast ecosystem for app development (plus many React technologies like components and props would be included in React Native). Dart isn't widely used outside of Flutter, adding an additional learning curve for web developers. <br><br>Flutter is also a widget-centric development model to user interfaces, different from the DOM-based development using HTML/CSS. PhoneGap would be recommended, languages and tools considered (since it only uses HTML, CSS, and JavaScript), but given its decreasing popularity (which means less up-to-date resources and learning tools) due to React Native/Flutter's large communities, <a href="https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html#:~:text=Adobe%20is%20discontinuing%20PhoneGap%2C%20PhoneGap,blog%20post%20for%20more%20information.">Adobe discontinuing PhoneGap</a>, and performance issues due to PhoneGap apps running in a WebView, my <u>overall recommendation would be React Native</u>, especially for those coming from a web development background.</p>
+        <script src="script.js"></script>
+    </body>
+</html>
