@@ -3,6 +3,8 @@ var CACHE_FILES = [
     'index.html',
     'script.js',
     'styles.css',
+    'table.jpeg',
+    'background-chat.jpeg'
 ];
 
 self.addEventListener('install', event => {
