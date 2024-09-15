@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Changing Theme</title>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.4/dist/htmx.min.js"></script>
+    <style>
+        body.light-theme {
+            background-color: white;
+            color: black;
+        }
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 1.2rem;
+        }
+        button {
+            color: black;
+            background-color: darkgray;
+            width: auto;
+            margin: 0 10px;
+            height: 30px;
+        }
+        section {
+            font-size: 1.2rem;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            font-style: italic;
+        }
+        figure {
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+ 
+<body class="light-theme">
+        <header>
+            <h1>Changing Themes</h1>
+        </header>
+        <section>
+            <h2>Using jQuery</h2>
+            <p>We will create a jQuery code so if the user clicks on Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well</p>
+            <figure>
+                <img id="theme-image" src="sun.jpeg" alt="cartoon sun" width="300" height="280">
+            </figure>
+        </section>
+        <footer>
+            <button id="light">Light Theme</button>
+            <button id="dark">Dark Theme</button>
+        </footer>
+        <section>
+            <p>Yes, you can use the hx-trigger attribute to specify multiple triggers for a single element. The rewritten code:</p>
+            <select name="city" id="city" hx-post="/api/search" hx-trigger="load, change" hx-target="#result">
+                <option>San Francisco</option>
+                <option>New York</option>
+                <option>Las Vegas</option>
+            </select>
+            
+            <div id="result"></div>
+            <p>The value "/api/search" represents the URL where the computer sends it request. </p>
+        </section>
+        <script>
+            $(document).ready(function() {
+                $("#light").click(function() {
+                    $("body").removeClass("dark-theme").addClass("light-theme");
+                    $("#theme-image").attr({src: "sun.jpeg"});
+                })
+                $("#dark").click(function() {
+                    $("body").removeClass("light-theme").addClass("dark-theme");
+                    $("#theme-image").attr({src: "moon.jpeg"});
+                })
+            })
+        </script>
+</body>
+ 
+</html>
