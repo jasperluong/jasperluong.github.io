@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="D3 homework">
+<title>D3 Homework</title>
+<style>
+#chart rect{
+  fill: #4aaeea;
+}
+
+#chart text{
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end; 
+}
+
+.axis text{
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line{
+  fill: none;
+  stroke : #fff;
+  shape-rendering: crispEdges;
+}
+
+body{
+  background: #1a1a1a;
+  color : #eaeaea;
+  padding : 10px;
+}
+</style>
+</head>
+<body>
+<div id="chart"></div> 
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+  // Load the data from the JSON file
+  d3.json("hw3data.json").then(data => {
+    // Set dimensions and margins for the chart
+    const width = 500;
+    const height = 300;
+    const margin = { top: 20, right: 30, bottom: 40, left: 40 };
+  
+    // Create the SVG container
+    const svg = d3.select("#chart")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+  
+    // Define x and y scales
+    const x = d3.scaleBand()
+      .domain(data.map(d => d.term))
+      .range([margin.left, width - margin.right])
+      .padding(0.1);
+  
+    const y = d3.scaleLinear()
+      .domain([0, d3.max(data, d => d.students)]).nice()
+      .range([height - margin.bottom, margin.top]);
+  
+    // Create bars
+    svg.selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", d => x(d.term))
+      .attr("y", d => y(d.students))
+      .attr("width", x.bandwidth())
+      .attr("height", d => y(0) - y(d.students))
+      .attr("fill", "#4aaeea")  
+      .on("mouseover", function(event, d) {
+        // Show tooltip on hover
+        const tooltip = svg.append("text")
+          .attr("id", "tooltip")
+          .attr("x", x(d.term) + x.bandwidth() / 2)
+          .attr("y", y(d.students) - 5)
+          .attr("text-anchor", "middle")
+          .attr("fill", "white")
+          .text(`${d.term} - ${d.students}`);
+      })
+      .on("mouseout", function() {
+        // Remove tooltip when not hovering
+        svg.select("#tooltip").remove();
+      });
+  
+    // Add x-axis
+    svg.append("g")
+      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .call(d3.axisBottom(x));
+  
+    // Add y-axis
+    svg.append("g")
+      .attr("transform", `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y));
+  });
+  </script>
+  
